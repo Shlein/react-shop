@@ -15,7 +15,7 @@ const BasketItem = (props) => {
 	  <li className="collection-item">
 		  {name}
 		  <button className='btn btn-change' onClick={() => decreaseQuantity(id)}>-</button>
-		  {quantity}
+		  {quantity > 0 ? quantity : removeFromBasket(id)}
 		  <button className='btn btn-change' onClick={() => increaseQuantity(id)}>+</button>
 		  = {price * quantity} руб.
 		  <span className='secondary-content'>
